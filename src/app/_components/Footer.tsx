@@ -49,9 +49,9 @@ export default function Footer() {
     					  <div className="single-footer-widget mb-4">
     						<h6 className={`${poppins.className} text-xl my-4`}>CONTACT US</h6>
     						<p>
-    							WhatsApp Reservasi 1 : +62 813-8550-0703 <br/>
-    							WhatsApp Reservasi 2 : +62 856-9434-2206 <br/>
-    							Instagram : @visitmulyaharja
+    							<a href="https://wa.me/6281385500703" target="_blank" className="hover:text-orange-400 hover:underline">WhatsApp Reservasi 1 : +62 813-8550-0703</a> <br/>
+    							<a href="https://wa.me/6285694342206" target="_blank" className="hover:text-orange-400 hover:underline">WhatsApp Reservasi 2 : +62 856-9434-2206</a> <br/>
+    							<a href="https://instagram.com/visitmulyaharja" target="_blank" className="hover:text-orange-400 hover:underline">Instagram : @visitmulyaharja</a>
     						</p>
     
     					  </div>
