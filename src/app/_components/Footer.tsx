@@ -38,7 +38,7 @@ export default function Footer() {
     						  <div className="col">
     							<ul>
     							  <li><a href="/paket-wisata" className="hover:text-orange-400 text-nowrap">&gt; Paket Wisata</a></li>
-    							  <li><a href="/menu" className="hover:text-orange-40 text-nowrap">&gt; Daftar Menu</a></li>
+    							  <li><a href="/menu" className="hover:text-orange-400 text-nowrap">&gt; Daftar Menu</a></li>
     							  <li><a href="/cafe" className="hover:text-orange-400 text-nowrap">&gt; Gardu Coffe Space</a></li>
     							</ul>
     						  </div>
