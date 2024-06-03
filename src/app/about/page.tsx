@@ -20,7 +20,7 @@ export default function About() {
 							<Image src="/about.jpg" width={662} height={200} alt="Mulyaharja"/>
 						</div>
 						<div className="flex flex-col">
-							<h1 className={`${poppins.className} text-black text-5xl my-4`}>Apa itu 'Mulyaharja'?</h1>
+							<h1 className={`${poppins.className} text-black text-5xl my-4`}>Apa itu &apos;Mulyaharja&apos;?</h1>
 							<p className="text-lg w-fit max-md:mx-2 max-w-[60ch] text-justify">
 								Kelurahan Mulyaharja, yang terletak di Kecamatan Bogor Selatan, Kota Bogor,
 								dikenal sebagai Kampung Tematik. Sebutan ini berasal dari hasil lomba rancang
