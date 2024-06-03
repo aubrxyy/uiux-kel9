@@ -1,0 +1,14 @@
+.price-btn {
+    background: ghostwhite;
+    border:1px solid #eee;
+    color:$black;
+    font-size: 14px;
+    font-weight:600;
+    padding:7px 20px;
+    margin: 5px 0;
+}
+
+.price-btn:hover {
+    background: orange;
+    color: white;
+}

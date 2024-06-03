@@ -30,18 +30,18 @@ export default function Home() {
         <div className='text-center'>
           <h1 className={`${poppins.className} text-4xl mb-3`}>Pilihan Paket</h1>
           <p className='w-fit max-w-[70ch] mx-auto mb-8'>Kami memiliki banyak pilihan paket yang akan membuat Anda lebih menyenangkan di Agro Eduwisata Organik Mulyaharja</p>
-          <div className='flex flex-wrap flex-row m-8 items-center gap-12 justify-center'>
-            <a href='/paket-wisata' className='shadow-lg p-4 rounded-xl hover:scale-105 transition-all'>
+          <div className='flex flex-wrap flex-row m-8 items-center justify-center'>
+            <a href='/paket-wisata' className='p-4 rounded-xl hover:scale-105 transition-all'>
               <Image src="/paketwisata.jpg" width={400} height={400} alt='Paket Wisata'/>
               <h1 className={`${poppins.className} text-left my-4 text-xl`}>PAKET WISATA</h1>
               <p className='w-[40ch] mb-4 text-justify text-gray-500'>Temukan keindahan alam dan keunikan budaya Mulyaharja dengan paket wisata kami yang eksklusif! Dirancang untuk memenuhi berbagai preferensi dan anggaran, paket wisata kami menawarkan pengalaman tak terlupakan bagi setiap jenis petualang.</p>
             </a>
-            <a href='/menu' className='shadow-lg p-4 rounded-xl hover:scale-105 transition-all'>
+            <a href='/menu' className='p-4 rounded-xl hover:scale-105 transition-all'>
               <Image src="/daftarmenu2.jpg" width={400} height={400} alt='Paket Wisata'/>
               <h1 className={`${poppins.className} text-left my-4 text-xl`}>DAFTAR MENU</h1>
               <p className='w-[40ch] mb-4 text-justify text-gray-500'>Temukan keindahan alam dan keunikan budaya Mulyaharja dengan paket wisata kami yang eksklusif! Dirancang untuk memenuhi berbagai preferensi dan anggaran, paket wisata kami menawarkan pengalaman tak terlupakan bagi setiap jenis petualang.</p>
             </a>
-            <a href='/menu' className='shadow-lg p-4 rounded-xl hover:scale-105 transition-all'>
+            <a href='/menu' className='p-4 rounded-xl hover:scale-105 transition-all'>
               <Image src="/daftarcoffee.jpg" width={400} height={400} alt='Paket Wisata'/>
               <h1 className={`${poppins.className} text-left my-4 text-xl`}>GARDU COFFEE SPACE</h1>
               <p className='w-[40ch] mb-4 text-justify text-gray-500'>Temukan keindahan alam dan keunikan budaya Mulyaharja dengan paket wisata kami yang eksklusif! Dirancang untuk memenuhi berbagai preferensi dan anggaran, paket wisata kami menawarkan pengalaman tak terlupakan bagi setiap jenis petualang.</p>
