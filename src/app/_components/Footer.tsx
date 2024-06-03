@@ -31,14 +31,14 @@ export default function Footer() {
     						  <div className="col">
     							<ul>
     							  <li><a href="index.html" className="hover:text-orange-400">&gt; Home</a></li>
-    							  <li><a href="about.html" className="hover:text-orange-400">&gt; Tentang Kami</a></li>
+    							  <li><a href="about.html" className="hover:text-orange-400 text-nowrap">&gt; Tentang Kami</a></li>
     							  <li><a href="facility.html" className="hover:text-orange-400">&gt; Fasilitas</a></li>
     							</ul>
     						  </div>
     						  <div className="col">
     							<ul>
-    							  <li><a href="paket-wisata.html" className="hover:text-orange-400">&gt; Paket Wisata</a></li>
-    							  <li><a href="daftarmenu.html" className="hover:text-orange-400">&gt; Daftar Menu</a></li>
+    							  <li><a href="paket-wisata.html" className="hover:text-orange-400 text-nowrap">&gt; Paket Wisata</a></li>
+    							  <li><a href="daftarmenu.html" className="hover:text-orange-40 text-nowrap">&gt; Daftar Menu</a></li>
     							  <li><a href="garducoff.html" className="hover:text-orange-400 text-nowrap">&gt; Gardu Coffe Space</a></li>
     							</ul>
     						  </div>
