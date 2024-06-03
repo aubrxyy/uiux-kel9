@@ -20,6 +20,7 @@ const navigation = [
   { name: "FACILITY", href: "/facility" },
   { name: "PAKET WISATA", href: "/paket-wisata" },
   { name: "MENU", href: "/menu" },
+  { name: "GARDU COFFEE", href: "/cafe" },
 ];
 
 interface HeaderProps {
