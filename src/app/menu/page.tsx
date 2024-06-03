@@ -5,7 +5,7 @@ export default function Menu() {
     return (
         <>
             <Hero bgImage="/daftarmenu2.jpg" pageTitle="Daftar Menu" pageLink="/menu"/>
-            <section className="dfmenu" id="dfmenu">
+            <section className="dfmenu bg-white" id="dfmenu">
                 <h2>Daftar Menu</h2>
                 <h3>Menu Nasi Pecel Ayam</h3>
     

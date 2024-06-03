@@ -10,7 +10,7 @@ body {
 
 :root {
   --primary: #043e29;
-  --bg: #ffffff;
+  --bg: #04091e;
 }
 
 * {
@@ -25,7 +25,7 @@ body {
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
-  color: #ffffff;
+  color: #000;
   /*min-height: 2000px;*/
 }
 
