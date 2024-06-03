@@ -18,7 +18,7 @@ export default function Footer() {
     						<p>
     						  Agro Edu Wisata Organik Mulyaharja, atau yang dikenal sebagai
     						  Kampung Tematik Mulyaharja, merupakan salah satu desa wisata di
-    						  Kota Bogor.esa ini memanfaatkan lahan pertanian yang ada untuk
+    						  Kota Bogor. Desa ini memanfaatkan lahan pertanian yang ada untuk
     						  menjadi lokasi wisata edukasi yang berfokus pada pertanian
     						  organik.
     						</p>
