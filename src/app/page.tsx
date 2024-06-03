@@ -20,7 +20,7 @@ export default function Home() {
               <a href='/about' className={`${poppins.className} text-gray-50 bg-gray-900 mx-auto px-4 py-3 text-sm`}>LIHAT SELENGKAPNYA</a>
             </div>
           </div>
-          <div className='max-xl:w-[500px]'>
+          <div className='max-xl:w-[500px] max-md:mx-2'>
             <Image src='/home(2).jpg' width={650} height={400} alt='About Image'/>
           </div>
         </div>

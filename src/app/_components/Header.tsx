@@ -31,6 +31,7 @@ export default function Header(props: HeaderProps) {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isTop, setIsTop] = useState(true);
+  const [isPanelOpen, setIsPanelOpen] = useState(false);
 
   const controlHeader = () => {
     if (typeof window !== 'undefined') {
@@ -51,13 +52,14 @@ export default function Header(props: HeaderProps) {
   }, [lastScrollY]);
 
   return (
-    <Disclosure as="nav" className={`z-50 fixed w-full py-3 transition-all duration-500 ${showHeader ? 'translate-y-0' : '-translate-y-full'} ${isTop ? 'bg-transparent' : 'bg-[#04091e]'}`}>
+    <Disclosure as="nav" className={`z-50 fixed w-full py-3 transition-all duration-500 ${showHeader ? 'translate-y-0' : '-translate-y-full'} ${isTop && !isPanelOpen ? 'bg-transparent' : 'bg-[#04091e]'}`}>
       {({ open }) => (
         <>
+          {setIsPanelOpen(open)}
           <div className="mx-auto max-w-[95%] px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
-              <div className="absolute inset-y-0 left-0 flex items-center xl:hidden">
-                <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-[#d4e0c5] hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#85A460]">
+              <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
+                <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-400">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -67,12 +69,12 @@ export default function Header(props: HeaderProps) {
                   )}
                 </DisclosureButton>
               </div>
-              <div className="flex flex-1 items-center justify-center xl:items-stretch xl:justify-start">
+              <div className="flex flex-1 items-center justify-center lg:items-stretch lg:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <Image src="/logoMulyaharja.png" width={80} height={80} alt="Logo Mulyaharja" />
                   <p className={`${poppins.className} text-white text-2xl ml-2`}>Mulyaharja</p>
                 </div>
-                <div className="hidden pt-2 lg:ml-auto mr-8 xl:block my-auto">
+                <div className="hidden pt-2 lg:ml-auto mr-8 lg:block my-auto">
                   <div className="flex space-x-16">
                     {navigation.map((item) => {
                       const isActive = pathname.endsWith(item.href);
@@ -92,8 +94,8 @@ export default function Header(props: HeaderProps) {
             </div>
           </div>
 
-          <DisclosurePanel className="xl:hidden">
-            <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
+          <DisclosurePanel className="lg:hidden bg-[#04091eD9] ">
+            <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3 ">
               {navigation.map((item) => (
                 <DisclosureButton
                   key={item.name}
@@ -101,9 +103,9 @@ export default function Header(props: HeaderProps) {
                   href={item.href}
                   className={`${
                     pathname.endsWith(item.href)
-                      ? "bg-dgreen text-white rounded-lg border-green-900"
-                      : "text-gray-500 border-green-800 hover:text-black lg:border-0 max-lg:active:text-black text-nowrap"
-                  } text-2xl block px-3 py-2 mx-3 transition-all lg:p-1`}
+                      ? "bg-dgreen text-orange-400 rounded-lg"
+                      : "text-white hover:text-orange-400 max-lg:active:text-orange-200 text-nowrap"
+                  } text-2xl rounded-xl block px-3 py-2 mx-3 transition-all lg:p-1`}
                 >
                   {item.name}
                 </DisclosureButton>

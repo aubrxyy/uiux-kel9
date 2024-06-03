@@ -13,15 +13,15 @@ export default function Facility() {
         <>
             <Hero bgImage="/hero-bg.jpg" pageTitle="Fasilitas" pageLink="/facility"/>
 
-            <section className="py-20 bg-white">
+            <section className="py-20 max-lg:py-12 bg-white">
 				<div className="container">
 					<div className="flex flex-row flex-wrap justify-center gap-x-32 gap-y-8">
 						<div>
 							<Image src="/facility.jpg" width={600} height={600} alt="Fasilitas Mulyaharja"/>
 						</div>
 						<div className="flex flex-col">
-							<h1 className={`${poppins.className} text-black w-[20ch] text-4xl my-4`}>Fasilitas Lengkap untuk Liburan Sempurna Anda</h1>
-							<p className="text-gray-600 text-lg w-fit max-md:mx-2 max-w-[40ch] text-justify my-2">
+							<h1 className={`${poppins.className} text-black max-w-[20ch] text-4xl my-4`}>Fasilitas Lengkap untuk Liburan Sempurna Anda</h1>
+							<p className="text-gray-600 text-lg w-fit max-w-[40ch] text-justify my-2">
 								Kami dengan bangga menawarkan berbagai fasilitas berkualitas tinggi untuk memastikan kenyamanan dan kepuasan setiap pengunjung. Nikmati pengalaman wisata yang luar biasa dengan fasilitas-fasilitas kami, yang mencakup: 
                             </p>
                             <ul className="my-2 ">
@@ -38,7 +38,7 @@ export default function Facility() {
 				</div>
             </section>
 
-            <section className="pt-16 pb-28 bg-white">
+            <section className="pt-16 max-lg:pt-8 pb-28 bg-white">
 				<div className="container">
 		            <div className="row d-flex justify-content-center">
 		                <div className="menu-content pb-70 col-lg-9">
