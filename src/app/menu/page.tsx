@@ -5,6 +5,7 @@ import { Poppins } from 'next/font/google';
 import Rating from '@mui/material/Rating';
 import { Eye } from 'react-feather';
 import { X } from 'react-feather';
+import Script from 'next/script';
 
 const poppins = Poppins({
     subsets: ["latin"],
@@ -215,7 +216,7 @@ export default function Menu() {
                     </div>
                 </div>
             </div>
-            <script src="/static/daftarmenu.js" />
+            <Script src="/static/daftarmenu.js" ></Script>
         </>
     );
 }
