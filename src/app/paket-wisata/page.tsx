@@ -1,7 +1,6 @@
-'use client';
-import { useEffect, useState } from 'react';
 import { Poppins } from "next/font/google";
 import Hero from "../_components/Hero";
+import { getTourPackages } from '../lib/data';
 
 type TourPackage = {
   id_paket: string;
@@ -16,25 +15,8 @@ const poppins = Poppins({
     weight: "600",
 });
 
-const ColumnsPage = () => {
-  const [tourPackages, setTourPackages] = useState<TourPackage[]>([]);
-
-  useEffect(() => {
-    const fetchTourPackages = async () => {
-      try {
-        const response = await fetch('/api/tour_package', { cache: 'no-store' });
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const data: TourPackage[] = await response.json();
-        setTourPackages(data);
-      } catch (error) {
-        console.error('Error fetching tour packages:', error);
-      }
-    };
-
-    fetchTourPackages();
-  }, []);
+const ColumnsPage = async () => {
+  const tourPackages = await getTourPackages();
 
   return (
      <>
@@ -43,7 +25,7 @@ const ColumnsPage = () => {
         <section className='pb-28 pt-16 bg-white'>
             <div className="mx-36">
                 <div className='flex flex-wrap items-center gap-x-16 gap-y-10 justify-center'>
-                {tourPackages.map((pkg) => (
+                {tourPackages.map((pkg: TourPackage) => (
                     <div key={pkg.id_paket} className='shadow-md max-lg:w-[60rem] w-96 lg:min-h-[27rem] p-4 rounded-xl'>
                         <h1 className={`${poppins.className} text-center my-4 text-xl`}>{pkg.nama_paket}</h1>
                         <div className="bg-orange-400 h-[1px] w-full mb-4"></div>
@@ -56,7 +38,6 @@ const ColumnsPage = () => {
             </div>
         </section>
      </>
-
   );
 };
 
