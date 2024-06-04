@@ -1,6 +1,11 @@
 import { Poppins } from "next/font/google";
 import Hero from "../_components/Hero";
-import { getTourPackages } from '../lib/data';
+import { query } from '../lib/db';
+
+const poppins = Poppins({
+    subsets: ["latin"],
+    weight: "600",
+});
 
 type TourPackage = {
   id_paket: string;
@@ -10,13 +15,21 @@ type TourPackage = {
   harga: number;
 };
 
-const poppins = Poppins({
-    subsets: ["latin"],
-    weight: "600",
-});
-
 const ColumnsPage = async () => {
-  const tourPackages = await getTourPackages();
+  let tourPackages: TourPackage[] = [];
+
+  try {
+    const result = await query('SELECT id_paket, nama_paket, deskripsi, deskripsi_harga, harga FROM project.tour_package');
+    tourPackages = result.rows.map((row: any) => ({
+      id_paket: row.id_paket,
+      nama_paket: row.nama_paket,
+      deskripsi: row.deskripsi,
+      deskripsi_harga: row.deskripsi_harga,
+      harga: row.harga,
+    }));
+  } catch (error) {
+    console.error('Error fetching tour packages:', error);
+  }
 
   return (
      <>
@@ -25,7 +38,7 @@ const ColumnsPage = async () => {
         <section className='pb-28 pt-16 bg-white'>
             <div className="mx-36">
                 <div className='flex flex-wrap items-center gap-x-16 gap-y-10 justify-center'>
-                {tourPackages.map((pkg: TourPackage) => (
+                {tourPackages.map((pkg) => (
                     <div key={pkg.id_paket} className='shadow-md max-lg:w-[60rem] w-96 lg:min-h-[27rem] p-4 rounded-xl'>
                         <h1 className={`${poppins.className} text-center my-4 text-xl`}>{pkg.nama_paket}</h1>
                         <div className="bg-orange-400 h-[1px] w-full mb-4"></div>
