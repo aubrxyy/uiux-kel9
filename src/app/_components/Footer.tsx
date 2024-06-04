@@ -14,14 +14,12 @@ export default function Footer() {
     				  <div className="row flex justify-between">
     					<div className="col-lg-3 col-md-6 col-sm-6">
     					  <div className="single-footer-widget mb-4">
-    						<h6 className={`${poppins.className} text-xl my-4`}>TENTANG KAMI</h6>
-    						<p>
-    						  Agro Edu Wisata Organik Mulyaharja, atau yang dikenal sebagai
-    						  Kampung Tematik Mulyaharja, merupakan salah satu desa wisata di
-    						  Kota Bogor. Desa ini memanfaatkan lahan pertanian yang ada untuk
-    						  menjadi lokasi wisata edukasi yang berfokus pada pertanian
-    						  organik.
-    						</p>
+							<h6 className={`${poppins.className} text-xl my-4`}>LOKASI</h6>
+    						<a href="https://maps.app.goo.gl/mpConzWNcxaCsfwP7" target="_blank">
+    							<p className="hover:text-orange-400 hover:underline">
+									RT.05/RW.01 Kelurahan Mulyaharja, Kecamatan Bogor Selatan, Kota Bogor, Jawa Barat 16135
+	    						</p>
+    						</a>
     					  </div>
     					</div>
     					<div className="col-lg-3 col-md-6 col-sm-6">
